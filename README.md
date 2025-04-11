@@ -53,3 +53,4 @@ latest_stock_price("AAPL") # __call__() 간접 호출
 
 ![image](https://github.com/user-attachments/assets/f92acb55-57eb-4dc6-8e9c-a03ca1b61057)
 
+## 03. Custom_Tool로_주식분석_에이전트_구축.ipynb
