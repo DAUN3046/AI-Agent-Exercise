@@ -16,11 +16,15 @@
 # 1. pip 명령어로 설치
 !pip install 'crewai[tools]'
 # 2. 다른 방식으로 불러오기
-from crewai.tools import BaseTool # --> 이 방법의 경우 추상클래스 부분이 꼬임
+from crewai.tools import tool # --> 이러면 원래 코드(데코레이터)로 실행 가능
+from crewai.tools import BaseTool # --> 이 방법의 경우 추상클래스 부분이 꼬임(아래 참조)
 ```
-이에 수반해서 tool 모듈을 통해 decorator를 지정하는 방식이 실행되지 않았습니다. 따라서 Pydantic의 BaseModel을 상속받는 클래스를 생성하는 방식으로 해결했습니다.
+### (추가) 데코레이터 대신 클래스를 정의하고 BaseTool을 상속하는 방식
+(*이에 대해 자세한 이해가 필요하다면 Pydantic의 데이터 모델 클래스 안에서 사용되는 Field 클래스를 키워드로 검색)
 
-`@tool` → `BaseTool` 상속으로 방식이 바뀐 것 같음. 따라서 데코레이터 대신 클래스를 정의하고 BaseTool을 상속(*이에 대해 자세한 이해가 필요하다면 Pydantic의 데이터 모델 클래스 안에서 사용되는 Field 클래스를 키워드로 검색) -> `_run` 함수도 지정해줘야되며 `name` 필드에 타입도 지정해줘야 오류가 안 남. -> 인스턴스 생성 후 실행하면 결과값을 얻을 수 있음.
+-> `_run` 함수도 지정해줘야되며 `name` 필드에 타입도 지정해줘야 오류가 안 남.
+
+-> 인스턴스 생성 후 실행하면 결과값을 얻을 수 있음.
 
 ```python
 # 1. 라이브러리 넣고
