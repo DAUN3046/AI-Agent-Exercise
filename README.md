@@ -54,7 +54,7 @@ latest_stock_price("AAPL") # __call__() 간접 호출
 ![image](https://github.com/user-attachments/assets/f92acb55-57eb-4dc6-8e9c-a03ca1b61057)
 
 ## 03. Custom_Tool로_주식분석_에이전트_구축.ipynb
-다양한 지표들을 가져와서 return 값으로 묶은 뒤 agent를 돌리면 재무 분석가 + 시장 분석가 + 위험 분석가 + 투자 전문가(앤트로픽 모델) 4개의 에이전트가 아래와 같은 보고서를 출력한다.
+다양한 지표들을 가져와서 return 값으로 묶은 뒤 agent를 돌리면 재무 분석가 + 시장 분석가 + 위험 분석가 + 투자 전문가(앤트로픽 모델) 4개의 에이전트가 아래와 같은 보고서를 출력한다.(데코레이터 사용)
 ![image](https://github.com/user-attachments/assets/55b3c1fd-8636-419e-b4f9-46763d353f65)
 ![image](https://github.com/user-attachments/assets/0ca4ac33-076f-4edf-b2f7-d40591665b06)
 ![image](https://github.com/user-attachments/assets/d399bd53-44e7-465d-8efe-4f188dafecdb)
